@@ -1,0 +1,44 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: white;}
+
+
+input{
+    display: table;
+    margin: 2% auto;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    width: 60%;
+}
+::placeholder { 
+    text-align: center;
+    opacity: 1; 
+  }
+
+  h4 {
+    text-align: center;
+    margin: 1% 0;
+    font-family: Tahoma, sans-serif;
+    font-size: 2vw;
+    font-weight: 500;
+    color: #999999;
+}
+
+button{
+  border-radius: 5px;
+}
+
+#btnNo{
+  background-color: #FAB4CF;
+  margin-right: 25vw;
+  color:white;
+}
+
+#btnYes{
+  background-color: #87D6B8 ;
+  color:white;
+}
+
+.flex{
+  display: flex;
+}

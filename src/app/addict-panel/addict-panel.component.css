@@ -1,0 +1,185 @@
+p {
+    padding:0;
+    margin: 0;
+    color:white;
+ }
+ 
+ h3 {
+     color:white;
+     font-family: Tahoma, sans-serif;
+ }
+ 
+ #section{   
+     width:100% !important;
+     height: 140px;
+     padding: 1% 0;
+     position: relative;
+     top:55px;
+     background-color: #B888FC;
+ }
+ 
+#addictLabel{
+    position: relative;
+    top: 100px;
+}
+
+#addictLabel p {
+    padding-left: 1%;
+    font-size: 30px;
+    color:#888888 !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+
+}
+
+#addaddictBtn{
+    position: relative;
+    top: 0;
+    left: 91%;
+    margin-top: 0px;
+    width:50px;
+    height:50px;
+    border-radius: 60px;
+    border: none;
+    background-color: #B666FC;
+}
+
+
+#addaddictBtn:hover{
+  position: relative;
+  top: 0;
+  left: 91%;
+  margin-top: 0px;
+  width:50px;
+  height:50px;
+  border-radius: 60px;
+  border: 1px solid #F6F6F6;
+  background-color: #B666FC;
+  transition: ease .5s;
+  animation: rotation 2s;
+
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+#addaddictBtn p {
+    margin-top: -10.5px;
+    font-size: 40px;
+    color:white !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+
+
+#suppaddictBtn{
+  position: relative;
+  top: 0;
+  left: 80%;
+  margin-top: 5px;
+  margin-left: 1.5vw;
+  width:30px;
+  height:30px;
+  border-radius: 60px;
+  border: none;
+  background-color: #FAB4CF;
+
+}
+
+
+#suppaddictBtn:hover{
+  position: relative;
+  top: 0;
+  left: 80%;
+  margin-top: 5px;
+  margin-left: 1.5vw;
+  width:30px;
+  height:30px;
+  border-radius: 60px;
+  border: 1px solid white;
+  background-color: #FF0000;
+  transition: ease .5s;
+
+}
+
+#suppaddictBtn p {
+  margin-top: -8px;
+  font-size: 25px;
+  color:white !important;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+
+}
+
+#addictPanel{
+    display: table;
+    margin: 0 auto;
+    position:relative;
+    top: 140px;
+    width:97%;
+    padding: 1% 0 0.6% 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #87D6B8;
+
+}
+
+#addictPanel ul li{
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+
+
+.toggle input {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    top:0;
+    left: 85%;
+    width: 80px;
+    height: 40px;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FAB4CF;
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    width: 38px;
+    height: 36px;
+    left: 2px;
+    top: 1px;
+    background-color: #eee;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #D3FFDB;
+  }
+  input:checked + .slider:before {
+    transform: translateX(40px);
+  }

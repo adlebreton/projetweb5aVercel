@@ -1,0 +1,239 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: white;}
+
+p {
+    font-size: 67px;
+    color: #000;
+}
+
+button{
+    font-family:  sans-serif;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #999;
+
+    border: none;
+    background-color: #B888FC;
+    color: #fff;
+    font-size: 1.8vw;
+    padding:5px 35px;
+    
+}
+ 
+.nav {
+  position: fixed;
+  z-index: 2;
+  left:48%;
+  top: 35%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.nav-item {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin: 12px auto;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav-item:hover {
+  background-color: #ffffff;
+}
+section {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  transition-delay: 0.5s;
+}
+.cover {
+  top: 127px;
+}
+h2 {
+  font-size: 80px;
+  text-align: center;
+}
+section:nth-of-type(1) {
+  background: #00c1c4;
+}
+section:nth-of-type(2) {
+  background: #9d7bc9;
+}
+section:nth-of-type(3) {
+  background: #87b827;
+}
+section:nth-of-type(4) {
+  background: #fa89a9;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio']#section1:checked ~ nav label[for='section1'] {
+  background-color: #fff;
+}
+input[type='radio']#section1:checked ~ section:nth-of-type(1) {
+  z-index: 1;
+  top: 60px;
+  transition: top 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+input[type='radio']#section1:checked ~ .cover {
+  background-color: #00c1c4;
+}
+input[type='radio']#section2:checked ~ nav label[for='section2'] {
+  background-color: white;
+}
+input[type='radio']#section2:checked ~ section:nth-of-type(2) {
+  z-index: 1;
+  top: 60px;
+  transition: top 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+input[type='radio']#section2:checked ~ .cover {
+  background-color: #9d7bc9;
+}
+input[type='radio']#section3:checked ~ nav label[for='section3'] {
+  background-color: white;
+}
+input[type='radio']#section3:checked ~ section:nth-of-type(3) {
+  z-index: 1;
+  top: 60px;
+  transition: top 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+input[type='radio']#section3:checked ~ .cover {
+  background-color: #87b827;
+}
+input[type='radio']#section4:checked ~ nav label[for='section4'] {
+  background-color: white;
+}
+input[type='radio']#section4:checked ~ section:nth-of-type(4) {
+  z-index: 1;
+  top: 60px;
+  transition: top 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+input[type='radio']#section4:checked ~ .cover {
+  background-color: #fa89a9;
+}
+
+#band{  
+    top:1000px;
+    background-color: #999999 !important;
+    height: 320px;
+}
+
+
+#accomp{
+    height: 450px;
+}
+
+#accomp h2{
+    margin-top:10%;
+    font-size: 30px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#accomp h3{
+    margin:10% 0 0 10%;
+    font-size: 20px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#accomp p{
+    margin:2% 0 0 10%;
+    font-size: 14px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+}
+
+
+#box{
+    height: 480px;
+
+    padding:2%;
+    
+} 
+
+#boxIn{
+height: 100%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #999;
+
+}
+
+
+
+#boxIn p{
+    margin:2% 0 0 0%;
+    font-size: 12px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+}
+
+.rightTxt{
+    text-align: right;
+    padding: 1%;
+    border-radius: 20px;
+
+}
+
+.leftTxt{
+
+    text-align: left;
+padding: 1%;
+    border-radius: 20px;
+
+
+}
+
+
+.leftTxt h2{
+    margin:0 0 0 0%;
+    text-align: left;
+    left:0;
+    font-size: 25px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.rightTxt h2{
+    margin:0 0 0 0%;
+    text-align: right;
+    left:0;
+    font-size: 25px;
+    color:#999 !important;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#wallpaper1{
+  width: 100%;
+  background-image: url("../../assets/images/dna.jpg");
+}
+
+#wallpaper2{
+  width: 100%;
+  background-image: url("../../assets/images/pills.jpg") ;
+}
+
+
+#wallpaper3{
+  width: 100%;
+  background-image: url("../../assets/images/metal.jpg") ;
+}
+
+#wallpaper3{
+  width: 100%;
+  background-image: url("../../assets/images/dna2.jpg") ;
+}

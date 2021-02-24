@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div id="panel" class="col s8 m8 l8">
+
+<form [formGroup]="frmSetNewPassword" (ngSubmit)="setPassword()">
+    <h2>Nouveau mot de passe</h2>
+    <h4>Veuillez entrer votre nouveau mot de passe</h4>
+    <div class="err"> {{err}}</div>
+    <div class="field">
+      <label class="label">Password: </label>
+      <div class="control">
+        <input class="form-control" type="password" placeholder="Mot de passe" name="password" formControlName="password" required
+        minlength="6">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Confirm Password: </label>
+      <div class="control">
+        <input class="form-control" type="password" placeholder="Confirmer Mot de passe"name="confirmPassword" formControlName="confirmPassword" required
+        minlength="6">
+      
+      </div>
+    </div>
+  
+    <div class="field">
+      <div class="control">
+        <button class="button is-fullwidth is-primary" type="submit" [disabled]="!frmSetNewPassword.valid">
+          <span class="icon">
+            <!--<fa-icon [icon]="saveIcon"></fa-icon>-->
+          </span>
+          <span>Reset</span>
+        </button>
+      </div>
+    </div>
+  </form>
+  

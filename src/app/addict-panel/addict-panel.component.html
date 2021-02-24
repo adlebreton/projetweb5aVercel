@@ -1,0 +1,39 @@
+
+
+<div id="addictLabel" style="display: flex;">
+    <div id="" class="col s6 m6 l6">
+        <p>Addictions</p>
+    </div>
+
+    <div id="" class="col s6 m6 l6">
+        <button id="addaddictBtn" data-toggle="modal" data-target="#openModal" (click)="openModal()">
+            <p>+</p>
+        </button>
+    </div>
+</div>
+
+
+<div id="addictPanel">
+    <div class="col s12 m12 l12" style="display: flex;" *ngFor="let addiction of addictList">
+        <div class="col s6 m6 l6">
+            <ul>
+                <li>
+                    <a [routerLink]="['../main',{ key: addiction.payload.doc.id , key2: addiction.payload.doc.data().name}]" >{{addiction.payload.doc.data().name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col s6 m6 l6">
+            <label class="toggle">
+                <input type="checkbox" (click)="toggleCheck(addiction,!addiction.payload.doc.data().check)" (click)= "update()" [(ngModel)]= "addiction.payload.doc.data().check"/>
+                <!--<span class="slider"></span> -->
+                <button id="suppaddictBtn" (click)="openConfirmationDialog(addiction)">
+                    <p>x</p>
+                </button>
+            </label>
+
+        </div>
+    </div>
+</div>
+
+
+

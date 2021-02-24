@@ -1,0 +1,88 @@
+<div id="section" style="display: flex;">
+    <div class="col s2 m2 l2">
+        <div id="profilPic">
+            <img id="profilScreen" src="../../assets/images/user.png">
+        </div>
+    </div>
+    <div id="" class="col s2 m2 l2">
+        <h3>{{name}}</h3>
+        <ul>
+        <li *ngFor="let addiction of addictList">
+            <a (click)="reloadpage()"[routerLink]="['../main',{ key: addiction.payload.doc.id , key2: addiction.payload.doc.data().name}]">  {{addiction.payload.doc.data().name}}</a>
+        </li>
+        </ul>
+    </div>
+    <div class="bubleSection col s2 m2 l2">
+        <div class="bubleInfos">
+            <p>X</p>
+        </div>
+        <p>Jours défis</p>
+    </div>
+    <div id="" class="bubleSection col s2 m2 l2">
+        <div class="bubleInfos">
+            <p>X</p>
+        </div>
+        <p>Jours succès</p>
+
+    </div>
+    <div id="" class="bubleSection col s2 m2 l2">
+        <div class="bubleInfos">
+            <p>X</p>
+        </div>
+        <p>Moyenne jours</p>
+
+    </div>
+    <div id="" class="col s2 m2 l2">
+       
+        <button id="addBtn" [routerLink] = "['../addictions',{ key: name}]" >
+            
+            <p>+</p>
+        </button>
+    </div>
+</div>
+
+
+<div id="goalLabel" style="display: flex;">
+    <div id="" class="col s6 m6 l6">
+        <p>Objectifs {{addictname}}</p>
+    </div>
+
+    <div id="" class="col s6 m6 l6">
+        <button id="addGoalBtn" data-toggle="modal" data-target="#openModal" (click)="openModal()">
+            <p>+</p>
+        </button>
+    </div>
+</div>
+
+
+<div id="goalPanel">
+   
+
+    <div class="col s12 m12 l12" style="display: flex;" *ngFor="let objectif of objList">
+        <div class="col s6 m6 l6">
+            <ul>
+                <li>
+                    {{objectif.payload.doc.data().name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col s6 m6 l6">
+            <label class="toggle">
+                <input type="checkbox" (click)="toggleCheck(objectif,!objectif.payload.doc.data().check)" (click) ="actualisePercent()" (click)= "update()" [(ngModel)]= "objectif.payload.doc.data().check" />
+                <span class="slider"></span> 
+                <button id="suppGoalBtn" (click)="openConfirmationDialog(objectif)">
+                    <p>x</p>
+                </button>
+            </label>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="result" class="col s12 m12 l12">
+    <p>Résultats</p>
+    <h2>{{percent|number:'1.0-0'}}</h2>
+    <h3>%</h3>
+</div>

@@ -1,0 +1,106 @@
+#back {
+	background: linear-gradient(-45deg, #B555FC, #B888FC, #23a6d5, #23d5ab) ;
+	background-size: 400% 400% ;
+	animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50% ;
+	}
+	50% {
+		background-position: 100% 50% ;
+	}
+	100% {
+		background-position: 0% 50% ;
+	}
+}
+
+
+p {
+    display: table !important;
+    margin: 0 auto !important;
+    font-size: 1vw !important;
+    font-style: italic !important;
+    color: #999999 !important;
+
+}
+
+a{
+    color:  #B888FC !important;
+}
+
+a:hover{
+    color:#B666FC !important;
+    cursor: pointer; 
+}
+
+h2 {
+    text-align: center;
+    margin: 4% 0;
+    font-family: Tahoma, sans-serif;
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #999999;
+}
+
+
+
+button{
+    font-family:  sans-serif;
+    border-radius: 15px;
+    border: none;
+    background-color: #B888FC;
+    color: #fff;
+    font-size: 1.8vw;
+    padding:5px 35px;
+    box-shadow: none;
+}
+
+button:hover{
+    background-color: #B999FC;
+
+}
+
+#subscribe, #connexion, .password, #error{
+    display: table;
+    margin: 2% auto;
+}
+
+#error{
+    color: red;
+}
+input{
+    display: table;
+    margin: 2% auto;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    width: 60%;
+}
+::placeholder { 
+    text-align: center;
+    opacity: 1; 
+  }
+  
+
+#panel {
+    display: table;
+    margin: 0 auto;
+    padding: 3%;
+    border: 1px solid #F6F6F6;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px rgba(171,171,171,0.75);
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(171,171,171,0.75);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(171,171,171,0.75);
+    position: relative;
+    top:15vh;
+    height: 55vh;
+    width:50vw !important;
+}
+
+#panel input{
+    border-radius: 50px;
+}
+

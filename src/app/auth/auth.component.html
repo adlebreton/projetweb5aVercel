@@ -1,0 +1,45 @@
+<div id="back">
+    <div class="row">
+        <div id="panel">
+
+            <h2 *ngIf="onSubscribe"> Inscription </h2>
+            <h2 *ngIf="!onSubscribe"> Connexion </h2>
+            <!--<h2 *ngIf="onForgetPassword"> Mot de passe oublié </h2>-->
+
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+
+                <input *ngIf="onSubscribe" type="text" id="name" placeholder="Nom/Prénom" class="form-control" ngModel
+                    name required minlength="3" name="name">
+
+                <input type="email" id="email" placeholder="Adresse de messagerie" class="form-control" ngModel required
+                    email name="email">
+
+
+                <input type="password" id="password" placeholder="Mot de passe" class="form-control" ngModel
+                    name="password" required minlength="6" name="password" appPassword>
+
+                <input *ngIf="onSubscribe" type="password" id="confirmPassword" placeholder="Confirmer mot de passe"
+                    class="form-control" ngModel name="password" required minlength="6" name="confirmPassword"
+                    type="password" appPassword>
+
+
+                <button type="submit" id="subscribe"> {{ onSubscribe ? 'Inscription' : "Connexion" }}</button>
+
+                <p *ngIf="onSubscribe" (click)="onSignin()" class="password">Vous avez déjà un compte ? <a>Se
+                        connecter</a></p>
+
+                <p *ngIf="!onSubscribe" (click)="onSignup()" class="password">Première visite ? <a>Inscrivez-vous</a>
+                </p>
+
+                <p *ngIf="!onSubscribe" class="password" [routerLink]="['../forgot']"><a>Mot de passe oublié</a></p>
+                <p *ngIf="fail" id="error">{{ error }}</p>
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+</div>
